@@ -3,7 +3,7 @@
 ## Este proyecto se ha realizado con el objetivo de facilitar la gestion de atencion de citas para barberia.
 
 ### Vista previa
-[![Home Page]()](https://left-the-matrix.netlify.app/)
+[![Home Page]()](https://cutdate.netlify.app/)
 
 **Instalacion**
 - npm install
