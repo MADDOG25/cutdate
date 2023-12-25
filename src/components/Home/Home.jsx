@@ -72,7 +72,7 @@ function Home() {
 
             <figure className="hero_figure">
               <img
-                src="/public/Logo CutDate (2).jpg"
+                src="/Logo CutDate (2).jpg"
                 alt="imagen hero bg"
                 className="hero_img"
               />
@@ -110,7 +110,7 @@ function Home() {
                   ¿Tienes una idea en mente? ¡Hablemos y hagámoslo realidad!
                 </h3>
                 <img
-                  src="/public/corte-diseño.jpg"
+                  src="/corte-diseño.jpg"
                   alt="corte con diseño"
                   className="img_service_item"
                 ></img>
@@ -121,7 +121,7 @@ function Home() {
             <article className="cont_article_service">
               <div className="service_item">
                 <img
-                  src="/public/corte-barba.jpg"
+                  src="/corte-barba.jpg"
                   alt="corte con diseño"
                   className="img_service_item"
                 ></img>
