@@ -44,7 +44,7 @@ function Home() {
 
             <img
             onClick={handlerClickMenu}
-              src="/src/assets/icon-menu.svg"
+              src="/icon-menu.svg"
               alt="icono hamburguesa"
               className="nav_menu"
             />
@@ -204,7 +204,7 @@ function Home() {
                 className="footer_link"
               >
                 <img
-                  src="/src/assets/instagram.svg"
+                  src="/instagram.svg"
                   alt="icono de Instagram"
                   className="footer_img"
                 />
@@ -217,7 +217,7 @@ function Home() {
                 className="footer_link"
               >
                 <img
-                  src="/src/assets/youtube.svg"
+                  src="/youtube.svg"
                   alt="icono de Youtube"
                   className="footer_img"
                 />
@@ -226,7 +226,7 @@ function Home() {
             <li className="footer_item">
               <a href="https://github.com/MADDOG25" className="footer_link">
                 <img
-                  src="/src/assets/github.svg"
+                  src="/github.svg"
                   alt="icono de Github"
                   className="footer_img"
                 />
@@ -238,7 +238,7 @@ function Home() {
                 className="footer_link"
               >
                 <img
-                  src="/src/assets/linkedin.svg"
+                  src="/linkedin.svg"
                   alt="icono de Linkedin"
                   className="footer_img"
                 />
