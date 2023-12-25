@@ -15,7 +15,9 @@ Currently, two official plugins are available:
 ### Vista previa
 [![Home Page]()](https://left-the-matrix.netlify.app/)
 
-**No requiere instalación**
+**Instalacion**
+- npm install
+- npm install -D tailwindcss
 
 ### **Indice**
 
