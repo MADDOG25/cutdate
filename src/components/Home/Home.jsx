@@ -47,7 +47,6 @@ function Home() {
               src="/src/assets/icon-menu.svg"
               alt="icono hamburguesa"
               className="nav_menu"
-              loading="lazy"
             />
           </nav>
 
@@ -76,7 +75,6 @@ function Home() {
                 src="/public/Logo CutDate (2).jpg"
                 alt="imagen hero bg"
                 className="hero_img"
-                loading="lazy"
               />
             </figure>
           </section>
@@ -115,7 +113,6 @@ function Home() {
                   src="/public/corte-diseño.jpg"
                   alt="corte con diseño"
                   className="img_service_item"
-                  loading="lazy"
                 ></img>
                 <p className="paragraph_service_item">Corte con líneas</p>
               </div>
@@ -127,7 +124,6 @@ function Home() {
                   src="/public/corte-barba.jpg"
                   alt="corte con diseño"
                   className="img_service_item"
-                  loading="lazy"
                 ></img>
                 <p className="paragraph_service_item">Corte de barba</p>
               </div>
