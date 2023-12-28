@@ -1,0 +1,23 @@
+:root {
+    --tussock: #bd9850;
+    --tussockWhite: #f8f6ee;
+    --bgButtonLight: #cdb377;
+    --bgButtonDark: #785130;
+    --bgNavList: #eee8d3;
+    --colorText: #66432d;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+  }

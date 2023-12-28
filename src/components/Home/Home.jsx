@@ -1,22 +1,5 @@
-import "./styleHome.css";
-// import './App/app.js';
-
-const handlerClickMenu = () => {
-  const menunav = document.querySelector(".nav_menu");
-const menuList = document.querySelector(".nav_list");
-const links = document.querySelectorAll(".nav_link");
-
-menunav.addEventListener("click", function () {
-  menuList.classList.toggle("nav_list--show");
-});
-
-links.forEach(function (link) {
-  link.addEventListener("click", function () {
-    menuList.classList.remove("nav_list--show");
-  });
-});
-
-}
+import '/src/theme/general.css';
+import "./home.css";
 
 function Home() {
   return (
@@ -42,12 +25,12 @@ function Home() {
               </li>
             </ul>
 
-            <img
+            {/* <img
             onClick={handlerClickMenu}
               src="/icon-menu.svg"
               alt="icono hamburguesa"
               className="nav_menu"
-            />
+            /> */}
           </nav>
 
           <section className="hero_main container container--hero">
