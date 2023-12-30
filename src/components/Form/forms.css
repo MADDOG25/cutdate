@@ -6,12 +6,12 @@
   align-items: center;
   gap: 1rem;
 }
-  .cont_form {
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-  }
+.cont_form {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
 .img_form {
   width: 100%;
   display: block;
@@ -30,6 +30,7 @@
   font-size: 1.5em;
 }
 .input_form {
+  width: 200px;
   outline: none;
   padding: 4px 6px;
   text-align: center;
@@ -37,14 +38,14 @@
   border: 1px solid var(--tussock);
   border-radius: 6px;
 }
-.paragraph_form{
-    text-align: center;
-    font-weight: 500;
-    font-size: 1rem;
+.paragraph_form {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
 }
 .btn_form {
   padding: 6px 14px;
-  box-shadow: 3px 2px 6px rgb(196, 194, 194);
+  box-shadow: 3px 2px 6px rgba(196, 194, 194, 1);
   font-size: 1em;
   color: var(--bgButtonDark);
   background-color: var(--bgButtonLight);
@@ -52,7 +53,12 @@
   border: none;
   cursor: pointer;
 }
-.btn_form:hover{
-    color: var(--tussockWhite);
-    transition: .3s ease;
+.btn_form:hover {
+  color: var(--tussockWhite);
+  transition: 0.3s ease;
+}
+.error_validation{
+  text-align: center;
+  font-size: 14px;
+  color: red;
 }

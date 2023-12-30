@@ -1,11 +1,11 @@
 import Home from './components/Home/Home';
-import Login from './components/Login/Login';
+import Forms from './components/Form/Forms';
 
 function App() {
   return (
     <>
-    <Login/>
-      {/* <Home/> */}
+    <Forms/> 
+    {/* <Home/>  */}
     </>
   );
 }
