@@ -4,8 +4,8 @@ import Forms from './components/Form/Forms';
 function App() {
   return (
     <>
-    <Forms/> 
-    {/* <Home/>  */}
+    {/* <Forms/> */}
+    <Home/>
     </>
   );
 }

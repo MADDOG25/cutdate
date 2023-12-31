@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import '/src/theme/general.css';
 import "./home.css";
 
 function Home() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const handlerMenuToggle = () => {
+      setMenuOpen((prevMenuOpen) => !prevMenuOpen);
+    }
+
   return (
     <>
       <main>
@@ -9,7 +17,7 @@ function Home() {
 
           <nav className="nav container container--hero">
 
-            <ul className="nav_list">
+            <ul className={`nav_list ${menuOpen ? 'nav_list--show' : ''}`}>
               <li className="nav_item">
                 <a href="#incio" className="nav_link">
                   Inicio
@@ -27,12 +35,12 @@ function Home() {
               </li>
             </ul>
 
-            {/* <img
-            onClick={handlerClickMenu}
+            <img
+              onClick={handlerMenuToggle}
               src="/icon-menu.svg"
               alt="icono hamburguesa"
               className="nav_menu"
-            /> */}
+            />
           </nav>
 
           <section className="hero_main container container--hero">

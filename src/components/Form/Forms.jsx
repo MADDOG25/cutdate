@@ -27,15 +27,9 @@ function Forms() {
     setForm("register");
   };
 
-  const {
-    register, 
-    handleSubmit,
-    formState: {errors}} = useForm();
-  const onSubmit= (data) => {
-    console.log(data);
-  };
+  const {register, handleSubmit, formState: {errors}} = useForm();
+  const onSubmit = (data) => {console.log(data)};
   
-
   return (
     <>
       <form
@@ -70,6 +64,7 @@ function Forms() {
               id="namelogin"
               placeholder="nombre"
               className="input_form"
+              maxLength={15}
             ></input>
             {errors.namelogin && <p className="error_validation">Nombre incorrecto</p>}
           </label>
@@ -80,12 +75,13 @@ function Forms() {
               id="passwordlogin"
               placeholder="contraseña"
               className="input_form"
+              maxLength={10}
             ></input>
             {errors.passwordlogin && <p className="error_validation">Contraseña invalida</p>}
           </label>
 
           <button type="submit" className="btn_form">
-            Entra
+            {form === 'login' ? 'Entrar' : 'Registrate'}
           </button>
 
           <p className="paragraph_form">OR</p>
@@ -97,7 +93,7 @@ function Forms() {
       </form>
 
       <form
-        onSubmit=''
+        onSubmit={handleSubmit(onSubmit)}
         id="cont_form_2"
         className="container cont_form"
         style={{
@@ -124,36 +120,36 @@ function Forms() {
           <label form="nameregister">
             <input
               type="text"
-              {...register("nameregister", {required: true})}
+              // {...register("nameregister", {required: true})}
               id="nameregister"
               placeholder="nombre"
               className="input_form"
             ></input>
-            {errors.nameregister && <p className="error_validation">Nombre incorrecto</p>}
+            {/* {errors.nameregister && <p className="error_validation">Nombre incorrecto</p>} */}
           </label>
           <label form="passwordregister">
             <input
               type="password"
-              {...register("passwordregister", {required: true})}
+              // {...register("passwordregister", {required: true})}
               id="passwordregister"
               placeholder="contraseña"
               className="input_form"
             ></input>
-            {errors.passwordregister && <p className="error_validation">Contraseña invalida</p>}
+            {/* {errors.passwordregister && <p className="error_validation">Contraseña invalida</p>} */}
           </label>
           <label form="passwordagainregister">
             <input
               type="password"
-              {...register("passwordagainregister", {required: true})}
+              // {...register("passwordagainregister", {required: true})}
               id="passwordagainregister"
               placeholder="Vuelve a escribir la contraseña"
               className="input_form"
             ></input>
-            {errors.passwordagainregister && <p className="error_validation">Contraseña no coincide</p>}
+            {/* {errors.passwordagainregister && <p className="error_validation">Contraseña no coincide</p>} */}
           </label>
 
           <button type="submit" className="btn_form">
-            Registrate
+          {form === 'login' ? 'Entrar' : 'Registrate'}
           </button>
 
           <p className="paragraph_form">OR</p>
