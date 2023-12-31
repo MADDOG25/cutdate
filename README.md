@@ -1,4 +1,4 @@
-# [CutDate](https://cutdate.netlify.app/) | [<img src="/instagram.svg" width="20" heigth="20">](https://www.instagram.com/devjeffrey/) | [<img src="/linkedin.svg" width="20" heigth="20">](https://www.linkedin.com/in/dev-jeffrey/) | [<img src="/github.svg" width="20" heigth="20">](https://github.com/MADDOG25) | [<img src="/youtube.svg" width="20" heigth="20">](https://www.youtube.com/channel/UCYt3thoR8nfBXE69jpQ7WNA)
+# [CutDate](https://cutdate.netlify.app/) | [<img src="/public/instagram.svg" width="20" heigth="20">](https://www.instagram.com/devjeffrey/) | [<img src="/public/linkedin.svg" width="20" heigth="20">](https://www.linkedin.com/in/dev-jeffrey/) | [<img src="/public/github.svg" width="20" heigth="20">](https://github.com/MADDOG25) | [<img src="/public/youtube.svg" width="20" heigth="20">](https://www.youtube.com/channel/UCYt3thoR8nfBXE69jpQ7WNA)
 
 ## Este proyecto se ha realizado con el objetivo de facilitar la gestion de atencion de citas para barberia.
 

@@ -71,7 +71,7 @@ function Home() {
             </article>
             <figure className="hero_figure">
               <img
-                src="/public/Logo CutDate BIG sin fondo.png"
+                src="/Logo CutDate BIG sin fondo.png"
                 alt="imagen hero bg"
                 className="hero_img"
               />
