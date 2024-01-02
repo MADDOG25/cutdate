@@ -1,11 +1,9 @@
-import Home from './components/Home/Home';
-import Forms from './components/Form/Forms';
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <>
-    {/* <Forms/> */}
-    <Home/>
+      <Home />
     </>
   );
 }
