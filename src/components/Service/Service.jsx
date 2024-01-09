@@ -17,7 +17,16 @@ export default function Service() {
           <article className="flex max-w-auto flex-col items-center justify-center">
             <div className="mt-4 flex items-center gap-x-4">
               <img
-                src="/cliente 3.jpg"
+                src="/1.png"
+                alt="imagen"
+                className="h-full w-full rounded-md bg-gray-50"
+              />
+            </div>
+          </article>
+          <article className="flex max-w-auto flex-col items-center justify-center">
+            <div className="mt-4 flex items-center gap-x-4">
+              <img
+                src="/2.png"
                 alt="imagen"
                 className="h-25 w-25 object-cover rounded-md bg-gray-50"
               />
@@ -26,7 +35,7 @@ export default function Service() {
           <article className="flex max-w-auto flex-col items-center justify-center">
             <div className="mt-4 flex items-center gap-x-4">
               <img
-                src="/cliente 5.jpg"
+                src="/3.png"
                 alt="imagen"
                 className="h-25 w-25 object-cover rounded-md bg-gray-50"
               />
@@ -35,7 +44,25 @@ export default function Service() {
           <article className="flex max-w-auto flex-col items-center justify-center">
             <div className="mt-4 flex items-center gap-x-4">
               <img
-                src="/cliente 6.jpg"
+                src="/4.png"
+                alt="imagen"
+                className="h-25 w-25 object-cover rounded-md bg-gray-50"
+              />
+            </div>
+          </article>
+          <article className="flex max-w-auto flex-col items-center justify-center">
+            <div className="mt-4 flex items-center gap-x-4">
+              <img
+                src="/5.png"
+                alt="imagen"
+                className="h-25 w-25 object-cover rounded-md bg-gray-50"
+              />
+            </div>
+          </article>
+          <article className="flex max-w-auto flex-col items-center justify-center">
+            <div className="mt-4 flex items-center gap-x-4">
+              <img
+                src="/6.png"
                 alt="imagen"
                 className="h-25 w-25 object-cover rounded-md bg-gray-50"
               />

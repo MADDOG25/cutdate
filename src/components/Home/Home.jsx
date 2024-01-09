@@ -1,6 +1,6 @@
 import Main from "./Main";
 import Feature from "./Feature";
-import Services from "../Services/Service";
+import Service from "../Service/Service";
 import Footer from "./Footer";
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     <>
       <Main />
       <Feature />
-      <Services />
+      <Service />
       <Footer />
     </>
   );

@@ -5,7 +5,6 @@ import "/src/theme/index.css";
 
 const navigation = [
   { name: "Inicio", href: "#" },
-  { name: "Barberos", href: "#" },
   { name: "Servicios", href: "#" },
   { name: "Contacto", href: "#" },
 ];
@@ -54,9 +53,9 @@ export default function Main() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-[--colorText]"
+              className="text-lg font-bold leading-6 text-[--colorText]"
             >
-              Inicia sesión <span aria-hidden="true">&rarr;</span>
+              Bienvenido
             </a>
           </div>
         </nav>
@@ -103,9 +102,9 @@ export default function Main() {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-[--colorText] hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-md font-bold leading-7 text-[--colorText] hover:bg-gray-50"
                   >
-                    Inicia sesión
+                    Bienvenido
                   </a>
                 </div>
               </div>

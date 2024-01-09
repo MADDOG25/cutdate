@@ -3,7 +3,7 @@ import "/src/theme/index.css";
 
 export default function Footer() {
   return (
-    <footer id="contacto">
+    <footer id="contacto" className='mt-6'>
       <section>
         <h2 className="text-center text-lg font-bold">
           Trabajado por @DevJeffrey
