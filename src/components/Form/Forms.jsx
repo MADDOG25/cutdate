@@ -1,165 +1,151 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import "/src/theme/general.css";
-import "./forms.css";
+import "/src/theme/index.css";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
-//ESTILOS DE VISUALIZACION
-const styles = {
-  transition: {
-    transition: "opacity 1s ease-in-out",
-  },
+export default function Form() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    date: "",
+    time: "",
+    haircutType: "",
+    otherType: '',
+  });
 
-  hidden: {
-    opacity: 0,
-    height: 0,
-    overflow: "hidden",
-  },
-  visible: { opacity: 1 },
-};
-
-//FUNCION PARA CAMBIAR VISTA DE FORMULARIOS
-function Forms() {
-  const [form, setForm] = useState("login");
-  const handleLogin = () => {
-    setForm("login");
-  };
-  const handleRegister = () => {
-    setForm("register");
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const {register, handleSubmit, formState: {errors}} = useForm();
-  const onSubmit = (data) => {console.log(data)};
-  
+  const refForm = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const serviceId = "service_9fp6b7a";
+    const templateId = "form_cutdate";
+    const apikey = "7_b7U5M8HU8dHDm7h";
+
+    emailjs
+      .sendForm(serviceId, templateId, refForm.current, apikey)
+      .then((response) => console.log(response.text))
+      .catch((error) => console.log(error));
+  };
+
   return (
-    <>
+    <div className="App mx-auto max-w-2xl text-center p-6 mt-10 mb-10">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Agenda de Citas de Barbería
+      </h1>
       <form
-        onSubmit={handleSubmit(onSubmit)}
-        id="cont_form_1"
-        className="container cont_form"
-        style={{
-          ...styles.transition,
-          ...(form === "login" ? styles.visible : styles.hidden),
-        }}
+        ref={refForm}
+        onSubmit={handleSubmit}
+        className="mx-auto mt-16 max-w-xl sm:mt-20 border-t border-[--tussock]"
       >
-        <fieldset className="form_field">
-          <img
-            src="/Logo CutDate BIG sin fondo.png"
-            alt="logo de cutdate"
-            className="img_form"
-          ></img>
-
-          <div className="cont_links">
-            <a href="#" onClick={handleLogin} disabled={form === "login"}>
-              Inicia sesión
-            </a>
-            <a href="#" onClick={handleRegister}>
-              Registrate
-            </a>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 m-6">
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Nombre:
+              <input
+                className="block w-56 text-center rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                type="text"
+                name="name"
+                placeholder="nombre"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </label>
           </div>
-
-          <label form="namelogin">
-            <input
-              type="text"
-              {...register("namelogin", {required: true})}
-              id="namelogin"
-              placeholder="nombre"
-              className="input_form"
-              maxLength={15}
-            ></input>
-            {errors.namelogin && <p className="error_validation">Nombre incorrecto</p>}
-          </label>
-          <label form="passwordlogin">
-            <input
-              type="password"
-              {...register("passwordlogin", {required: true})}
-              id="passwordlogin"
-              placeholder="contraseña"
-              className="input_form"
-              maxLength={10}
-            ></input>
-            {errors.passwordlogin && <p className="error_validation">Contraseña invalida</p>}
-          </label>
-
-          <button type="submit" className="btn_form">
-            {form === 'login' ? 'Entrar' : 'Registrate'}
-          </button>
-
-          <p className="paragraph_form">OR</p>
-
-          <button type="submit" className="btn_form">
-            Entra con Facebook o Google
-          </button>
-        </fieldset>
-      </form>
-
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        id="cont_form_2"
-        className="container cont_form"
-        style={{
-          ...styles.transition,
-          ...(form === "register" ? styles.visible : styles.hidden),
-        }}
-      >
-        <fieldset className="form_field">
-          <img
-            src="/Logo CutDate BIG sin fondo.png"
-            alt="logo de cutdate"
-            className="img_form"
-          ></img>
-
-          <div className="cont_links">
-            <a href="#" onClick={handleLogin} >
-              Inicia sesión
-            </a>
-            <a href="#" onClick={handleRegister} disabled={form === "register"}>
-              Registrate
-            </a>
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Correo Electrónico:
+              <input
+                className="block w-56 text-center rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                type="email"
+                name="email"
+                placeholder='correo'
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
           </div>
-
-          <label form="nameregister">
-            <input
-              type="text"
-              // {...register("nameregister", {required: true})}
-              id="nameregister"
-              placeholder="nombre"
-              className="input_form"
-            ></input>
-            {/* {errors.nameregister && <p className="error_validation">Nombre incorrecto</p>} */}
-          </label>
-          <label form="passwordregister">
-            <input
-              type="password"
-              // {...register("passwordregister", {required: true})}
-              id="passwordregister"
-              placeholder="contraseña"
-              className="input_form"
-            ></input>
-            {/* {errors.passwordregister && <p className="error_validation">Contraseña invalida</p>} */}
-          </label>
-          <label form="passwordagainregister">
-            <input
-              type="password"
-              // {...register("passwordagainregister", {required: true})}
-              id="passwordagainregister"
-              placeholder="Vuelve a escribir la contraseña"
-              className="input_form"
-            ></input>
-            {/* {errors.passwordagainregister && <p className="error_validation">Contraseña no coincide</p>} */}
-          </label>
-
-          <button type="submit" className="btn_form">
-          {form === 'login' ? 'Entrar' : 'Registrate'}
-          </button>
-
-          <p className="paragraph_form">OR</p>
-
-          <button type="submit" className="btn_form">
-            Registrate con Facebook o Google
-          </button>
-        </fieldset>
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Fecha:
+              <input
+                className="block w-56 text-center rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Hora:
+              <input
+                className="block w-56 text-center rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                type="time"
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Tipo de Corte:
+              <select
+                className="block w-56 text-center bg-transparent bg-none rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                name="haircutType"
+                value={formData.haircutType}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Seleccionar tipo de corte</option>
+                <option value="Jersey">Jersey</option>
+                <option value="Taper">Taper</option>
+                <option value="Chaval">Chaval</option>
+                <option value="BuzzCut">BuzzCut</option>
+                <option value="Corte sencillo">Corte sencillo</option>
+                <option value="Corte Complet">Corte Completo</option>
+                {/* Agrega más opciones según sea necesario */}
+              </select>
+            </label>
+          </div>
+          <div className="flex items-center justify-center">
+            <label className="block text-gray-800 font-semibold text-sm">
+              Otros servicios:
+              <select
+                className="block w-56 text-center bg-transparent bg-none rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
+                name="otherType"
+                value={formData.otherType}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Seleccionar otros servicios</option>
+                <option value="Cejas">Cejas</option>
+                <option value="Barba">Barba</option>
+                <option value="Diseño o Lineas">Diseño o Lineas</option>
+                <option value="Cerquillo">Cerquillo</option>
+                {/* Agrega más opciones según sea necesario */}
+              </select>
+            </label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          className="cursor-pointer px-6 py-2 rounded-lg bg-[--bgButtonDark] text-[--tussockWhite] hover:bg-[--bgButtonLight] hover:text-[--tussockWhite] focus:text-[--bgButtonDark] focus:bg-gray-200 transition duration-200"
+        >
+          Agendar Cita
+        </button>
       </form>
-    </>
+    </div>
   );
 }
-export default Forms;

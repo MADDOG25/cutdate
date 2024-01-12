@@ -1,6 +1,7 @@
 import Main from "./Main";
 import Feature from "./Feature";
 import Service from "../Service/Service";
+import Form from '../Form/Forms';
 import Footer from "./Footer";
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       <Main />
       <Feature />
       <Service />
+      <Form />
       <Footer />
     </>
   );
