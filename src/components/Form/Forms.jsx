@@ -3,13 +3,15 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 export default function Form() {
+  const [mostrarExito, setMostrarExito] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     date: "",
     time: "",
     haircutType: "",
-    otherType: '',
+    otherType: "",
   });
 
   const handleChange = (e) => {
@@ -33,9 +35,13 @@ export default function Form() {
       .catch((error) => console.log(error));
   };
 
+  const handleClick = () => {
+    setMostrarExito(true);
+  };
+
   return (
     <div className="App mx-auto max-w-2xl text-center p-6 mt-10 mb-10">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h1 id='contacto' className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Agenda de Citas de Barbería
       </h1>
       <form
@@ -65,7 +71,7 @@ export default function Form() {
                 className="block w-56 text-center rounded-md py-1.5 px-2 ring-1 ring-inset ring-gray-400 focus:text-gray-800"
                 type="email"
                 name="email"
-                placeholder='correo'
+                placeholder="correo"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -142,10 +148,13 @@ export default function Form() {
         </div>
         <button
           type="submit"
+          onClick={handleClick}
           className="cursor-pointer px-6 py-2 rounded-lg bg-[--bgButtonDark] text-[--tussockWhite] hover:bg-[--bgButtonLight] hover:text-[--tussockWhite] focus:text-[--bgButtonDark] focus:bg-gray-200 transition duration-200"
         >
           Agendar Cita
         </button>
+
+        {mostrarExito && <p>¡Cita agendada!</p>}
       </form>
     </div>
   );
