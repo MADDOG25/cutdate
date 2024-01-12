@@ -130,6 +130,7 @@ export default function Form() {
                 required
               >
                 <option value="">Seleccionar otros servicios</option>
+                <option value="Ninguno">Ninguno</option>
                 <option value="Cejas">Cejas</option>
                 <option value="Barba">Barba</option>
                 <option value="Diseño o Lineas">Diseño o Lineas</option>
